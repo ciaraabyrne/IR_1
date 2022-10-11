@@ -33,7 +33,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>org.example.MyClass</mainClass>
+                            <mainClass>org.example.CreateIndex</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
