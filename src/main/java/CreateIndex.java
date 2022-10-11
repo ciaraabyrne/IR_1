@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 import java.nio.file.Paths;
 import java.nio.file.Files;
+import java.util.Arrays;
 import java.util.Objects;
 
 import org.apache.lucene.analysis.Analyzer;
@@ -59,11 +60,12 @@ public class CreateIndex
             System.out.printf("Indexing \"%s\"\n", arg);
             String content = new String(Files.readAllBytes(Paths.get(arg)));
             String[] tokens = content.split(" ");
+            System.out.print(Arrays.toString(tokens));
             for(String i: tokens) {
                 if (Objects.equals(i, ".I")) {
                     // Load the contents of the file
 
-                        System.out.print(i);
+                        System.out.println(i);
                     // Create a new document and add the file's contents
                     Document doc = new Document();
                     doc.add(new StringField("filename", arg, Field.Store.YES));
