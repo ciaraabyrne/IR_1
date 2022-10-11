@@ -64,7 +64,7 @@ public class CreateIndex
             for(String i: tokens) {
                 if (Objects.equals(i, ".I")) {
                     // Load the contents of the file
-
+                    System.out.print(Arrays.toString((i + 1).toCharArray()));
                         System.out.println(i);
                     // Create a new document and add the file's contents
                     Document doc = new Document();
